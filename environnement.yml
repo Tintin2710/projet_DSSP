@@ -1,0 +1,14 @@
+name : projet
+channels:
+    - conda-forge
+    - salilab
+    - ostrokach
+    - sbl
+    - HCC
+dependencies:
+    - python = 3.12
+    - pip
+    - dssp
+    - pandas
+    - python-dotenv
+  
