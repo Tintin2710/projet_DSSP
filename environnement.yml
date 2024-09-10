@@ -1,15 +1,23 @@
 name : projet
 channels:
-    - conda-forge
-    - salilab
-    - ostrokach
-    - sbl
-    - HCC
+  - conda-forge
+  - defaults
+  - bioconda
+  - ostrokach
+  - salilab
 dependencies:
-    - python = 3.12
-    - pip
-    - dssp
-    - biopython
-    - pandas
-    - python-dotenv
+  - dssp
+  - biopython  
+  - python  
+  - pandas
+  - numpy
+  - matplotlib  
+  - boost
+  - ipython
+  - boost-cpp
+  - jupyter_client
+  - jupyter_core
+  - importlib_metadata
+  - matplotlib-inline
+  - pdb4amber
   
