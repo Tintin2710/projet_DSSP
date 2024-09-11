@@ -12,13 +12,13 @@ class HydrogenBondDetector:
         
         for i in range(num_residues):  # Iterate over donor residues
             donor_residue = self.main_chain_atoms[i]
-            donor_chain_id = donor_residue.get('chain_id', None)  # 获取 donor 的链号
+            donor_chain_id = donor_residue.get('chain_id', None)  # Get the donor's chain number
             for j in range(i + 1, num_residues):  # Iterate over acceptor residues
                 acceptor_residue = self.main_chain_atoms[j]
-                acceptor_chain_id = acceptor_residue.get('chain_id', None)  # 获取 acceptor 的链号
+                acceptor_chain_id = acceptor_residue.get('chain_id', None)  # Get the acceptor's chain number
                 
                 if donor_chain_id != acceptor_chain_id:
-                    #print(f"跨链氢键跳过: donor_chain_id={donor_chain_id}, acceptor_chain_id={acceptor_chain_id}")
+                    #print(f"Cross-chain hydrogen bond skipping: donor_chain_id={donor_chain_id}, acceptor_chain_id={acceptor_chain_id}")
                     continue
 
                 # Calculate hydrogen bond energy
