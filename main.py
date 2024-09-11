@@ -1,4 +1,4 @@
-from pdb_reader import ReadPdbStructure
+from read_pdb_structure import ReadPdbStructure
 from hydrogen_bond_detector import HydrogenBondDetector
 from secondary_structure_assigner import SecondaryStructureAssigner
 from comparator import Compare
