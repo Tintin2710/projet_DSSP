@@ -17,7 +17,7 @@ class ReadPdbStructure:
         return structure
     
     def _get_main_chain_atoms(self):
-        """提取每个残基的主链原子坐标 (N, CA, C, O)"""
+        """Extract the main chain atomic coordinates of each residue (N, CA, C, O)"""
         main_chain_atoms = []
         previous_res_id = None
         for model in self.structure:
