@@ -1,4 +1,3 @@
-import numpy as np
 from Bio.PDB import PDBParser
 from Bio.PDB.Polypeptide import is_aa
 
