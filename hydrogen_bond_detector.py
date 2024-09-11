@@ -18,7 +18,6 @@ class HydrogenBondDetector:
                 acceptor_chain_id = acceptor_residue.get('chain_id', None)  # Get the acceptor's chain number
                 
                 if donor_chain_id != acceptor_chain_id:
-                    #print(f"Cross-chain hydrogen bond skipping: donor_chain_id={donor_chain_id}, acceptor_chain_id={acceptor_chain_id}")
                     continue
 
                 # Calculate hydrogen bond energy
