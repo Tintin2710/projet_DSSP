@@ -33,6 +33,7 @@ if __name__ == "__main__":
 
 **Output**
 The script will print the following information:
+
 -Number of main chain atoms extracted.
 
 -Number of hydrogen bonds detected.
