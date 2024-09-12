@@ -68,7 +68,7 @@ class SecondaryStructureAssigner:
             diff = abs(donor_residue_id - acceptor_residue_id)
 
             # Calculate dihedral angles for donor and acceptor residues
-            if donor_residue_id in res_id_to_index and acceptor_residue_id in res_id_to_index:
+            if donor_residue_id in res_id_to_index and acceptor_residue_id in res_id_to_index:#Ensure that both donor and acceptor residue IDs are indexed in the backbone sequence.
                 donor_idx = res_id_to_index[donor_residue_id]
                 acceptor_idx = res_id_to_index[acceptor_residue_id]
 
