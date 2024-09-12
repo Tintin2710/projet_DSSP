@@ -73,17 +73,37 @@ class Compare:
         tp = sum([1 for i in range(len(self.predicted_structure)) if self.predicted_structure[i] == self.true_structure[i]])
         accuracy = tp / len(self.predicted_structure)
 
-        # Calculate Helix sensitivity
+        # Calculate Helix Sensitivity
+        # Step 1: Count the total number of helices ('H') in the true structure (Total Actual Positives for helices)
         total_helices_in_dssp = sum([1 for i in range(len(self.true_structure)) if self.true_structure[i] == 'H'])
-        helix_sensitivity = (sum([1 for i in range(len(self.predicted_structure)) 
-                                  if self.predicted_structure[i] == 'H' and self.true_structure[i] == 'H']) 
-                             / total_helices_in_dssp) if total_helices_in_dssp > 0 else 0
-        
-        # Calculate β-sheet sensitivity
+
+        # Step 2: Calculate True Positives (TP) for helices, i.e., when both the predicted and true structure are 'H'
+        tp_helix = sum([1 for i in range(len(self.predicted_structure)) 
+                        if self.predicted_structure[i] == 'H' and self.true_structure[i] == 'H'])
+
+        # Step 3: Calculate False Negatives (FN) for helices, i.e., when the true structure is 'H' but predicted structure is not 'H'
+        fn_helix = sum([1 for i in range(len(self.predicted_structure)) 
+                        if self.predicted_structure[i] != 'H' and self.true_structure[i] == 'H'])
+
+        # Step 4: Calculate helix sensitivity (recall) = TP / (TP + FN), but handle the case where no helices are present in the true structure
+        helix_sensitivity = (tp_helix / (tp_helix + fn_helix)) if (tp_helix + fn_helix) > 0 else 0
+
+
+        # Calculate β-Sheet Sensitivity
+        # Step 1: Count the total number of β-sheets ('E') in the true structure (Total Actual Positives for β-sheets)
         total_beta_in_dssp = sum([1 for i in range(len(self.true_structure)) if self.true_structure[i] == 'E'])
-        beta_sensitivity = (sum([1 for i in range(len(self.predicted_structure)) 
-                                 if self.predicted_structure[i] == 'E' and self.true_structure[i] == 'E']) 
-                            / total_beta_in_dssp) if total_beta_in_dssp > 0 else 0
+
+        # Step 2: Calculate True Positives (TP) for β-sheets, i.e., when both the predicted and true structure are 'E'
+        tp_beta = sum([1 for i in range(len(self.predicted_structure)) 
+                    if self.predicted_structure[i] == 'E' and self.true_structure[i] == 'E'])
+
+        # Step 3: Calculate False Negatives (FN) for β-sheets, i.e., when the true structure is 'E' but predicted structure is not 'E'
+        fn_beta = sum([1 for i in range(len(self.predicted_structure)) 
+                    if self.predicted_structure[i] != 'E' and self.true_structure[i] == 'E'])
+
+        # Step 4: Calculate β-sheet sensitivity (recall) = TP / (TP + FN), but handle the case where no β-sheets are present in the true structure
+        beta_sensitivity = (tp_beta / (tp_beta + fn_beta)) if (tp_beta + fn_beta) > 0 else 0
+
 
         return accuracy, helix_sensitivity, beta_sensitivity
 
