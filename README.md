@@ -28,7 +28,8 @@ Here’s an example:
 ```python
 if __name__ == "__main__":
     pdb_filename = "path/to/your/pdbfile.pdb"  # Replace with your actual PDB file path
-    main(pdb_filename)
+    output_filename = "file.txt"
+    main(pdb_filename, output_filename)
 ```
 
 **Output**
