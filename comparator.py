@@ -85,8 +85,5 @@ class Compare:
                                  if self.predicted_structure[i] == 'E' and self.true_structure[i] == 'E']) 
                             / total_beta_in_dssp) if total_beta_in_dssp > 0 else 0
 
-        print(f"Helix sensitivity: {helix_sensitivity}")
-        print(f"β-Sheet sensitivity: {beta_sensitivity}")
-
         return accuracy, helix_sensitivity, beta_sensitivity
 
