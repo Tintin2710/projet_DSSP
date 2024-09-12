@@ -1,7 +1,7 @@
-# projet
+# DSSP 
 
 ## Description
-This project is a Python-based tool for predicting and evaluating the secondary structure of proteins using hydrogen bond detection and energy calculations. The tool compares the predicted secondary structure with the DSSP-assigned secondary structure to calculate accuracy, helix sensitivity, and beta-sheet sensitivity.
+This is a Python program to implement the DSSP method, implementinger its ability to use atomic coordinate data to identify hydrogen bonds and assign secondary structure elements to protein residues. Finally the predicted secondary structure is compared to the secondary structure assigned by DSSP to derive accuracy, helix sensitivity and β-sheet sensitivity.
 
 ## Features
 - **Main chain Atom Extraction.** : The file `read_pdb_structure.py` contains the ReadPdbStructure class which can extract the main chain atoms (N, CA, C, O) from PDB file.
@@ -11,7 +11,16 @@ This project is a Python-based tool for predicting and evaluating the secondary 
 - **Main code**: The main script `main.py` that imports and utilizes all the classes mentioned above to run the complete process.
 
 ## Requirement
-To run these scripts, the file `environment.yml` can create identical development environments and ensure that all dependencies are aligned with project requirements.
+- To run these scripts, the file `environment.yml` can create identical development environments and ensure that all dependencies are aligned with project requirements.
+
+```
+conda create -f environment.yml
+conda activate dssp_env
+```
+
+- If you want to run DSSP (Dictionary of Secondary Structure of Proteins) locally, you need to download and install it on your computer!
+for `conda`:
+`conda install -c salilab dssp`
 
 ## Usage
 This script processes a PDB file to extract main chain atoms, detect hydrogen bonds, assign secondary structures, and compare the results with DSSP. Follow the steps below to use the script:
