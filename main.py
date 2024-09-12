@@ -42,6 +42,6 @@ def main(pdb_filename, output_filename="output.txt"):
         f.write(f"Beta-Sheet Sensitivity: {beta_sensitivity:.2f}\n")
 
 if __name__ == "__main__":
-    pdb_filename = "./data/1HT6.pdb"  # Replace with your actual PDB file path
-    output_filename = "1HT6.txt"  # Define the output file name
+    pdb_filename = "path/to/file"  # Replace with your actual PDB file path
+    output_filename = "file.txt"  # Define the output file name
     main(pdb_filename, output_filename)
