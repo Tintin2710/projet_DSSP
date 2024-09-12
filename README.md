@@ -1,7 +1,7 @@
 # DSSP 
 
 ## Description
-This is a Python program to implement the DSSP (Dictionary of Secondary Structures of Proteins) method, implementinger its ability to use atomic coordinate data to identify hydrogen bonds and assign secondary structure elements to protein residues. Finally the predicted secondary structure is compared to the secondary structure assigned by DSSP to derive accuracy, helix sensitivity and β-sheet sensitivity.
+This is a Python program to implement the DSSP **(Dictionary of Secondary Structures of Proteins)**method, implementinger its ability to use atomic coordinate data to identify hydrogen bonds and assign secondary structure elements to protein residues. Finally the predicted secondary structure is compared to the secondary structure assigned by DSSP to derive accuracy, helix sensitivity and β-sheet sensitivity.
 
 ## Features
 - **Main chain Atom Extraction.** : The file `read_pdb_structure.py` contains the ReadPdbStructure class which can extract the main chain atoms (N, CA, C, O) from PDB file.
