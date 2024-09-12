@@ -41,7 +41,7 @@ if __name__ == "__main__":
     main(pdb_filename, output_filename)
 ```
 
-**Output**
+**Output**:
 The script will print the following information in a file:
 
 - Number of main chain atoms extracted.<br>
