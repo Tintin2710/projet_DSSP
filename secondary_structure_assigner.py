@@ -100,7 +100,7 @@ class SecondaryStructureAssigner:
                     )
 
                     # Helix detection: Check φ and ψ angles and distance
-                    if diff in [3,4] and (-90 <= donor_phi <= -40 and -70 <= donor_psi <= -20) and (-90 <= acceptor_phi <= -40 and -70 <= acceptor_psi <= -20):
+                    if diff in [3,4,5] and (-90 <= donor_phi <= -40 and -70 <= donor_psi <= -20) and (-90 <= acceptor_phi <= -40 and -70 <= acceptor_psi <= -20):
                         helix.add(donor_residue_id)
                         helix.add(acceptor_residue_id)
 
