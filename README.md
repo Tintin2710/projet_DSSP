@@ -42,19 +42,12 @@ if __name__ == "__main__":
 ```
 
 **Output**
-The script will print the following information:
+The script will print the following information in a file:
 
--Number of main chain atoms extracted.
+- Number of main chain atoms extracted.<br>
+- Number of hydrogen bonds detected.<br>
+- Accuracy<br>
+- Helix sensitivity<br>
+- Beta-sheet sensitivity<br>
 
--Number of hydrogen bonds detected.
-
--Predicted structre.
-
--Ture structure by DSSP.
-
--Accuracy
-
--Helix sensitivity
-
--Beta-sheet sensitivity
 
