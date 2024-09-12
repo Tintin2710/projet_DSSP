@@ -36,8 +36,8 @@ def main(pdb_filename):
     # Print the evaluation results
     print(f"Accuracy: {accuracy:.2f}")
     print(f"Helix Sensitivity: {helix_sensitivity:.2f}")
-    print(f"Beta Sensitivity: {beta_sensitivity:.2f}")
+    print(f"Beta-Sheet Sensitivity: {beta_sensitivity:.2f}")
 
 if __name__ == "__main__":
-    pdb_filename = './data/4QR3.pdb'  # Replace with your actual PDB file path
+    pdb_filename = pdb_file  # Replace with your actual PDB file path
     main(pdb_filename)
