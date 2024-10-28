@@ -10,8 +10,8 @@ This is a Python program to implement the DSSP **(Dictionary of Secondary Struct
 - To run these scripts, the file `environment.yml` can create identical development environments and ensure that all dependencies are aligned with project requirements.
 
 ```
-conda create -f environment.yml
-conda activate dssp_env
+conda create -f DSSPenv.yml
+conda activate DSSPenv
 ```
 
 - If you want to run DSSP (Dictionary of Secondary Structure of Proteins) locally, you need to download and install it on your computer!
