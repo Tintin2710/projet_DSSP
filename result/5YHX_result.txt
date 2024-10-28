@@ -1,0 +1,30 @@
+Predicted Secondary Structure by Chain:
+Chain A:
+H H H H H H H H H H H H H H H H H H C C C C C C C C C C C C C C C C H H H H H H H H H H H H H H C E H H H H H H H H H H C H H H H H H H H H H H H H H H C C C E C E C C C C C C C C C E E E C C C C H H H H H H H H H H H H H H H H H H H H H H H H C C H H H H H H H H H H H H H H H H H H H C
+
+Chain B:
+C C H H H H H H H H H H H H H H H H H C C C C C C C C C C C C C C C C C H H H H H H H H H H H H H C C E H H H H H H H H H H C H H H H H H H H H H H H H H H C C C E C C C C C C E E C C C C H H H H H H H H H H H H H H H H H H H H H H H H H C H H H H H H H H H H H H H H H H H H C C
+
+Chain G:
+H H H H H H H H H H H H H H H H H C C C C C C C C C C C C C C C C C H H H H H H H H H H H H H H C E H H H H H H H H H H C H H H H H H H H H H H H H H H C C C E C E C C C C C C C C C E E E C C C C H H H H H H H H H H H H H H H H H H H H H H H H H C H H H H H H H H H H H H H H H H H H C C
+
+Chain H:
+C H H H H H H H H H H H H H H H H H H C C C C C C C C C C C C H H H H H H H H H H H H H H C E H H C H H H C H H C C H H H H H H H H H H H H H H H C C C E C E C C E E E C C C C H H H H H H H H H H H H H H H H H H H H H H H H H C H H H H H H H H H H H H H H H H H H C C
+
+Chain M:
+C H H H H H H H H H H H H H H H H H H C C C C C C C C C C C C C C C C H H H H H H H H H H H H H H C E H H H H H H H H H H C H H H H H H H H H H H H H H H C C C E C E C C C C C C C C C E E E C C C C H H H H H H H H H H H H H H H H H H H H H H H H C C H H H H H H H H H H H H H H H H H H H C
+
+Chain N:
+C H H H H H H H H H H H H H H H H H H H C C C C C C C C C C C C C C C C H H H H H H H H H H H H H H C E H H H H H H H H H H C H H H H H H H H H H H H H H C C C C E C E C C C C C C C C C E E E C C C C H H H H H H H H H H H H H H H H H H H H H H H H H C H H H H H H H H H H H H H H H H H H C C
+
+Chain S:
+C H H H H H H H H H H H H H H H H H H H C C C C C C C C C C C C C C C C H H H H H H H H H H H H H H C E H H H C H H H C C C C H H H H H H H H H H H H H H H C C C E C E C C C C C C C C C E E E C C C C H H H H H H H H H H H H H H H H H H H H H H H H H C H H H H H H H H H H H H H H H H H H C C
+
+Chain T:
+H H H H H H H H H H H H H H H H H H C C C C C C C C C C C C C C C C H H H H H H H H H H H H H H C E H H H H H H H H H H C H H H H H H H H H H H H H H H C C C E C E C C C C C C C C C E E E C C C C H H H H H H H H H H H H H H H H H H H H H H H H C C H H H H H H H H H H H H H H H H H H H C
+
+Overall Comparison Results
+------------------------------
+Overall Accuracy: 0.889
+Helix Sensitivity: 0.985
+Beta-Sheet Sensitivity: 0.611

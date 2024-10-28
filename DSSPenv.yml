@@ -1,0 +1,19 @@
+name: DSSPenv
+channels:
+  - mx
+  - salilab
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1=main
+  - _openmp_mutex=4.5=1_gnu
+  - bzip2=1.0.8=h7b6447c_0
+  - dssp=3.0.0=hf484d3e_3
+  - icu=58.2=he6710b0_3
+  - libboost=1.67.0=h46d08c1_4
+  - libgcc-ng=9.3.0=h5101ec6_17
+  - libgomp=9.3.0=h5101ec6_17
+  - libstdcxx-ng=9.3.0=hd4cf53a_17
+  - reduce=3.24=0
+  - xz=5.2.5=h7b6447c_0
+  - zlib=1.2.11=h7b6447c_3
+prefix: /home/lynda/miniconda3/envs/DSSPenv
