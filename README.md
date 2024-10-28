@@ -30,7 +30,9 @@ for `conda`:
 **Run the Script**: To run the script, provide the path to the PDB file as an argument. You can modify the pdb_filename variable directly in `main.py` or pass it dynamically.
 
 Here’s an example:
-```python contribute_secondary_structure.py -i ./data/4QR3.pdb -o ./result/4QR3_result.txt
+```
+python contribute_secondary_structure.py -i ./data/4QR3.pdb -o ./result/4QR3_result.txt
+
 ```
 
 **Output**:<br>
