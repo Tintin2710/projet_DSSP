@@ -8,7 +8,6 @@ from operator import itemgetter
 from Bio.PDB import PDBParser, DSSP
 
 
-
 class PDBProcessor:
     """Handles PDB file parsing and hydrogen addition."""
 
@@ -49,8 +48,6 @@ class PDBProcessor:
                     dico_res[chain_id][res_num][atom_name] = atom
         return dico_res
 
-
-import math
 
 class HydrogenBondCalculator:
     """Calculates hydrogen bonds between residues."""
@@ -271,7 +268,7 @@ class SecondaryStructureAssigner:
     
     @staticmethod
     def res_turnT(dico_res, dico_res_struct, list_4turn, list_3turn, list_5turn):
-        """逐链处理，将结构信息填入所有残基字典中"""
+        """Process each chain and fill structure information into all residue dictionaries."""
         for chain_id in dico_res_struct.keys():
             if chain_id not in list_4turn or chain_id not in list_3turn or chain_id not in list_5turn:
                 continue  
@@ -279,11 +276,11 @@ class SecondaryStructureAssigner:
             chain_struct = dico_res_struct[chain_id]
             
             for res in chain_struct.keys():
-                # 处理4-turn, 3-turn, 和5-turn结构
+                # Handle 4-turn, 3-turn, and 5-turn structures
                 if res in set(list_4turn[chain_id][0]) or res in set(list_5turn[chain_id][0]) or res in set(list_3turn[chain_id][0]):
                     chain_struct[res]['type'] = 'T'
                 
-                # 处理每个结构类型的起始和终止残基
+                # Handle the start and end residues for each structure type
                 if res in [x[0] for x in list_3turn[chain_id][1]]:
                     chain_struct[res]["3T"] = '>'
                     if res + 1 in chain_struct:
@@ -631,17 +628,22 @@ def main(argv):
     try:
         opts, args = getopt.getopt(argv, "hi:o:", ["ifile=", "ofile="])
     except getopt.GetoptError:
-        print('Usage: dssp_like.py -i <pdbfile> -o <outputfile>')
+        print('Usage: contribute_secondary_structure.py -i <pdbfile> -o <outputfile>')
         sys.exit(2)
 
     for opt, arg in opts:
         if opt == '-h':
-            print('Usage: dssp_like.py -i <pdbfile> -o <outputfile>')
+            print('Usage: contribute_secondary_structure.py -i <pdbfile> -o <outputfile>')
             sys.exit()
         elif opt in ("-i", "--ifile"):
             pdbfile = arg
         elif opt in ("-o", "--ofile"):
             outputfile = arg
+            
+    if not pdbfile or not outputfile:
+        print("Error: Input and output file must be specified.")
+        print('Usage: contribute_secondary_structure.py -i <pdbfile> -o <outputfile>')
+        sys.exit(2)
 
     print(f'Input file is {pdbfile}')
     print(f'Output file is {outputfile}')
