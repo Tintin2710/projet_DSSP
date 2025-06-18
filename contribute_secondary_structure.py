@@ -1,4 +1,5 @@
 import sys
+import os
 import getopt
 import math
 import numpy as np
@@ -14,6 +15,20 @@ class PDBProcessor:
     interac_atoms = ["N", "C", "O", "H", "H1", "CA"]
 
     def __init__(self, pdb_file):
+        # Check if the PDB file exists in the current directory
+        if not os.path.exists(pdb_file):
+            # Search for matching files in the same directory without distinguishing between upper and lower case letters.
+            directory, basename = os.path.split(pdb_file)
+            directory = directory or '.'  # Handle current directory case
+            lower_basename = basename.lower()
+            for f in os.listdir(directory):
+                if f.lower() == lower_basename:
+                    pdb_file = os.path.join(directory, f)
+                    break
+
+        # If still not found, raise an error
+        if not os.path.exists(pdb_file):
+            raise FileNotFoundError(f"PDB file not found: {pdb_file}")
         self.pdb_file = pdb_file
         self.reduced_pdb_file = self.add_hydrogens_with_reduce()
 
