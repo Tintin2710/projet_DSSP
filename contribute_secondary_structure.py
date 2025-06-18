@@ -50,6 +50,8 @@ class PDBProcessor:
         return dico_res
 
 
+import math
+
 class HydrogenBondCalculator:
     """Calculates hydrogen bonds between residues."""
 
@@ -68,19 +70,36 @@ class HydrogenBondCalculator:
                          (atom_b['z'] - atom_a['z']) ** 2)
 
     def is_hydrogen_bond(self, atom_a, atom_b):
-        """Determines if a hydrogen bond exists based on distance and energy calculation."""
+        """
+        Determines if a hydrogen bond exists based on distance and energy calculation.
+        This version uses robust logic to select the correct hydrogen atom.
+        """
+
+        # First, try to get the 'H' atom.
+        h_atom_coords = atom_b.get('H')
+        #    If the 'H' atom does not exist (get returns None), try to get the 'H1' atom as a backup.
+        if h_atom_coords is None:
+            h_atom_coords = atom_b.get('H1')
+
+        # If neither 'H' nor 'H1' exists, h_atom_coords will be None.
+        # The distance method will correctly return float('inf').
+        r_oh = self.distance(atom_a.get('O'), h_atom_coords)
+        r_ch = self.distance(atom_a.get('C'), h_atom_coords)
+
+        # Other distance calculations remain unchanged
         r_on = self.distance(atom_a.get('O'), atom_b.get('N'))
-        r_oh = self.distance(atom_a.get('O'), atom_b.get('H')) or self.distance(atom_a.get('O'), atom_b.get('H1'))
         r_cn = self.distance(atom_a.get('C'), atom_b.get('N'))
-        r_ch = self.distance(atom_a.get('C'), atom_b.get('H')) or self.distance(atom_a.get('C'), atom_b.get('H1'))
-        
+
+        # Check if any distance calculation failed (i.e., atom does not exist)
         if float('inf') in {r_on, r_oh, r_cn, r_ch}:
             return False
-        
+
+        # Energy calculation formula remains unchanged
         E_elec = self.q1 * self.q2 * self.f * (1 / r_on + 1 / r_ch - 1 / r_oh - 1 / r_cn)
         if E_elec < self.Emin:
-            self.hydrogen_bond_count += 1  # Increment the counter
+            self.hydrogen_bond_count += 1
             return True
+            
         return False
 
 
