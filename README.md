@@ -7,7 +7,7 @@ This is a Python program to implement the DSSP **(Dictionary of Secondary Struct
 
 
 ## Requirement
-- To run these scripts, the file `environment.yml` can create identical development environments and ensure that all dependencies are aligned with project requirements.
+- To run these scripts, the file `DSSPenv.yml` can create identical development environments and ensure that all dependencies are aligned with project requirements.
 
 ```
 conda create -f DSSPenv.yml
@@ -21,13 +21,13 @@ for `conda`:
 ## Usage
 This script processes a PDB file to extract main chain atoms, detect hydrogen bonds, assign secondary structures, and compare the results with DSSP. Follow the steps below to use the script:
 
-**Install Dependencies**: Make sure the necessary Python packages are installed. Use either conda with the environment.yml file
+**Install Dependencies**: Make sure the necessary Python packages are installed. Use either conda with the DSSPenv.yml file
 for `conda`:
 `conda env create -f DSSPenv.yml`
 
 **Prepare the PDB File**: Ensure you have the PDB file you want to analyze. Place it in the appropriate directory.
 
-**Run the Script**: To run the script, provide the path to the PDB file as an argument. You can modify the pdb_filename variable directly in `main.py` or pass it dynamically.
+**Run the Script**: To run the script, provide the path to the PDB file as an argument. You can modify the pdb_filename dynamically.
 
 Here’s an example:
 ```
