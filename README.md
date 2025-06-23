@@ -10,7 +10,7 @@ This is a Python program to implement the DSSP **(Dictionary of Secondary Struct
 - To run these scripts, the file `DSSPenv.yml` can create identical development environments and ensure that all dependencies are aligned with project requirements.
 
 ```
-conda create -f DSSPenv.yml
+conda env create -f DSSPenv.yml
 conda activate DSSPenv
 ```
 

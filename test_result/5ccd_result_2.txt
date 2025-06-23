@@ -1,0 +1,9 @@
+Predicted Secondary Structure by Chain:
+Chain A:
+C C E E E E E C C H H C C H H H H H H H H H C C C E C E C E C C E C E E E C C C C C C E C E E E C C C C H H H H H H H H H H H H H H H C C C C E C E C E C E C E C C C C C C C C C C C E C E C C E C E C C C C C C C C C C C C C C C C C C C C C E C C C C H H H H H H H H H H H H H C C C C E C E C E C E C C C C C C H H H H H H H H H H H H H C C E E E C H H H H H H H H H H H H C C C C E C E E E C C C C C C C H H H H H H H H H H H C H H H H H H H H H H H H H H H H
+
+Overall Comparison Results
+------------------------------
+Overall Accuracy: 0.804
+Helix Sensitivity: 0.920
+Beta-Sheet Sensitivity: 0.569

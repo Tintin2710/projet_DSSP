@@ -1,8 +1,10 @@
 name: DSSPenv
 channels:
   - mx
-  - salilab
   - defaults
+  - conda-forge
+  - salilab
+  - bioconda
 dependencies:
   - _libgcc_mutex=0.1=main
   - _openmp_mutex=4.5=1_gnu
@@ -16,4 +18,5 @@ dependencies:
   - reduce=3.24=0
   - xz=5.2.5=h7b6447c_0
   - zlib=1.2.11=h7b6447c_3
-prefix: /home/lynda/miniconda3/envs/DSSPenv
+  - numpy
+prefix: /home/haiding/miniconda3/envs/DSSPenv
