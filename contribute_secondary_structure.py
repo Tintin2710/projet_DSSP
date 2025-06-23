@@ -34,7 +34,10 @@ class PDBProcessor:
 
     def add_hydrogens_with_reduce(self):
         """Adds hydrogens to the PDB file using the Reduce tool and returns the modified file name."""
-        reduced_pdb_file = "reduced_" + self.pdb_file
+        dir_name = os.path.dirname(self.pdb_file)
+        base_name = os.path.basename(self.pdb_file)
+        reduced_base_name = "reduced_" + base_name
+        reduced_pdb_file = os.path.join(dir_name, reduced_base_name)
         with open(reduced_pdb_file, 'w') as output_file:
             subprocess.run(['reduce', '-HIS', self.pdb_file], stdout=output_file)
         print(f"Hydrogens added to: {reduced_pdb_file}")
