@@ -410,21 +410,21 @@ class SecondaryStructureAssigner:
 
     @staticmethod
     def res_helixH(dico_res, dico_res_struct, h_alpha):
-        """逐链填充所有残基的结构信息，处理 alpha 螺旋信息。
+        """Fill in structural information for all residues chain by chain, handling alpha helix information.
         
         Parameters
         ----------
         dico_res : dict
-            包含所有残基的字典，按链组织。
+            Dictionary containing all residues, organized by chain.
         dico_res_struct : dict
-            包含所有残基结构信息的字典。
+            Dictionary containing structural information for all residues.
         h_alpha : dict
-            每条链中 alpha 螺旋的残基列表。
+            List of residues in alpha helices for each chain.
 
         Returns
         -------
         dict
-            更新后的 `dico_res_struct` 字典。
+            Updated `dico_res_struct` dictionary.
         """
         for chain_id, chain_residues in dico_res.items():
             if chain_id not in h_alpha:
