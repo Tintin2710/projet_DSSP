@@ -405,7 +405,7 @@ class SecondaryStructureAssigner:
                 continue
             for res in chain_residues.keys():
                 if res in h_pi[chain_id]:
-                    dico_res_struct[chain_id][res]['type'] = 'I'
+                    dico_res_struct[chain_id][res]['type'] = 'H'
         return dico_res_struct
 
     @staticmethod
@@ -457,7 +457,7 @@ class SecondaryStructureAssigner:
                 continue
             for res in chain_residues.keys():
                 if res in h_310[chain_id]:
-                    dico_res_struct[chain_id][res]['type'] = 'G'
+                    dico_res_struct[chain_id][res]['type'] = 'H'
         return dico_res_struct
 
     def assign_structure(self):
